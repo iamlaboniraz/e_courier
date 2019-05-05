@@ -1,0 +1,9 @@
+<h1>This is driver page</h1>
+</br>
+{% for driver in driver_list.all %}
+<h2>{{driver.username}}</h2> 
+<p>{{driver.Car_details}} </p>
+<p>{{driver.Car_models_number}}</p>
+ <img src="{{ driver.profile_picture.url}}" alt="{{ driver.username }}"height=300></br>
+<a href="{% url 'confirm' %}">Confirm</a>
+{% endfor %}

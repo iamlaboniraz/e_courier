@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block c %}
+<h1>Service</h1>
+<form action="{% url 'send_driver' %}"method="post"enctype="multipart/form-data">
+	{% csrf_token %}
+	   <a href="{% url 'logout' %}">Log out</a>
+       <strong>You are logged in as {{user.username}}</strong>
+       <hr>
+     {{deliveryform }}
+   <input type="submit"value="Send Request">
+</form>
+
+{% endblock %}
+
